@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `sale_price` decimal(25,2) NOT NULL,
   `categorie_id` int(11) unsigned NOT NULL,
   `media_id` int(11) DEFAULT '0',
+  'product_number' varchar(15) DEFAULT NULL;
   `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
