@@ -121,8 +121,8 @@ CREATE TABLE IF NOT EXISTS `user_groups` (
 
 INSERT INTO `user_groups` (`id`, `group_name`, `group_level`, `group_status`) VALUES
 (1, 'Admin', 1, 1),
-(2, 'special', 2, 1),
-(3, 'User', 3, 1);
+(2, 'Leveranse', 2, 1),
+(3, 'Kundesenter', 3, 1);
 
 --
 -- Indexes for table `categories`

@@ -6,14 +6,10 @@
     </a>
   </li>
   <li>
-    <a href="#" class="submenu-toggle">
+    <a href="add_sale.php" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-list"></i>
-       <span>Sales</span>
+       <span>Registrer salg</span>
       </a>
-      <ul class="nav submenu">
-         <li><a href="sales.php">Manage Sales</a> </li>
-         <li><a href="add_sale.php">Add Sale</a> </li>
-     </ul>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
