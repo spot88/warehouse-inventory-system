@@ -125,10 +125,6 @@ INSERT INTO `user_groups` (`id`, `group_name`, `group_level`, `group_status`) VA
 (3, 'User', 3, 1);
 
 --
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
@@ -158,27 +154,21 @@ ALTER TABLE `sales`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
 
---
+
 -- Indexes for table `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_level` (`user_level`);
 
---
+
 -- Indexes for table `user_groups`
---
 ALTER TABLE `user_groups`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `group_level` (`group_level`);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
---
 -- AUTO_INCREMENT for table `categories`
---
+
 ALTER TABLE `categories`
   MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
@@ -228,6 +218,3 @@ ALTER TABLE `sales`
 ALTER TABLE `users`
   ADD CONSTRAINT `FK_user` FOREIGN KEY (`user_level`) REFERENCES `user_groups` (`group_level`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

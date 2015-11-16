@@ -6,9 +6,8 @@ class  Media {
   public $fileName;
   public $fileType;
   public $fileTempPath;
-  //Set destination for upload
-  public $userPath = SITE_ROOT.DS.'..'.DS.'uploads/users';
-  public $productPath = SITE_ROOT.DS.'..'.DS.'uploads/products';
+  public $userPath = 'uploads/users';
+  public $productPath = 'uploads/products';
 
 
   public $errors = array();
