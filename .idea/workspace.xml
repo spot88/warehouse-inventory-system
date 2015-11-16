@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a362fc-a842-40ad-8b78-35a7e18978cc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_sale.php" afterPath="$PROJECT_DIR$/add_sale.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax.php" afterPath="$PROJECT_DIR$/ajax.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/config.php" afterPath="$PROJECT_DIR$/includes/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/upload.php" afterPath="$PROJECT_DIR$/includes/upload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oswa_inv.sql" afterPath="$PROJECT_DIR$/oswa_inv.sql" />
     </list>
     <ignored path="warehouse-inventory-system.iws" />
@@ -24,11 +30,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="oswa_inv.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="oswa_inv.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oswa_inv.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2624703">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="119" column="2" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_sale.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/add_sale.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+              <folding>
+                <marker date="1447679322991" expanded="true" signature="605:624" placeholder="INSERT INTO sales..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ajax.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.0942528">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,7 +70,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/includes/config.php" />
+        <option value="$PROJECT_DIR$/includes/upload.php" />
         <option value="$PROJECT_DIR$/oswa_inv.sql" />
+        <option value="$PROJECT_DIR$/add_sale.php" />
+        <option value="$PROJECT_DIR$/ajax.php" />
       </list>
     </option>
   </component>
@@ -103,6 +135,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="warehouse-inventory-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="warehouse-inventory-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -111,6 +157,31 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
@@ -153,10 +224,83 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321839">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+          <folding>
+            <marker date="1447678954732" expanded="true" signature="5629:5670" placeholder="INSERT INTO media..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/oswa_inv.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2624703">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="2" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.461538">
+          <caret line="185" column="12" selection-start-line="185" selection-start-column="12" selection-end-line="185" selection-end-column="12" />
+          <folding>
+            <marker date="1447678194665" expanded="true" signature="337:351" placeholder="SELECT * FRO..${$db-&gt;escape($table)}..." />
+            <marker date="1447678194665" expanded="true" signature="988:1061" placeholder="SELECT * FRO..${{$db-&gt;escape($table)}..." />
+            <marker date="1447678194665" expanded="true" signature="1461:1473" placeholder="DELETE FROM ..." />
+            <marker date="1447678194665" expanded="true" signature="1913:1944" placeholder="SELECT COUNT..${$db-&gt;escape($table)}..." />
+            <marker date="1447678194665" expanded="true" signature="2882:2960" placeholder="SELECT id,us..users..." />
+            <marker date="1447678194665" expanded="true" signature="3703:3781" placeholder="SELECT id,us..users..." />
+            <marker date="1447678194665" expanded="true" signature="5422:5490" placeholder="UPDATE users..." />
+            <marker date="1447678194665" expanded="true" signature="5826:5909" placeholder="SELECT group..user_groups..." />
+            <marker date="1447678194665" expanded="true" signature="6236:6323" placeholder="SELECT group..user_groups..." />
+            <marker date="1447678194665" expanded="true" signature="8497:8558" placeholder="SELECT name ..products..." />
+            <marker date="1447678194665" expanded="true" signature="8934:8956" placeholder="SELECT * FRO..products..." />
+            <marker date="1447678194665" expanded="true" signature="9354:9420" placeholder="UPDATE produ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_sale.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding>
+            <marker date="1447679322991" expanded="true" signature="605:624" placeholder="INSERT INTO sales..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.094866075">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0942528">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>
