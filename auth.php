@@ -12,7 +12,6 @@ if(empty($errors)){
      $session->login($user_id);
     //Update Sign in time
      updateLastLogIn($user_id);
-     $session->msg("s", "Welcome to OSWA-INV.");
      redirect('home.php',false);
 
   } else {
