@@ -1,7 +1,8 @@
 <?php
   $page_title = 'All Product';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+
+// Checking what level user has permission to view this page
    page_require_level(2);
   $products = join_product_table();
 ?>
@@ -24,10 +25,10 @@
                 <th class="text-center" style="width: 50px;">#</th>
                 <th> Photo</th>
                 <th> Product Title </th>
-                <th class="text-center" style="width: 10%;"> Categorie </th>
-                <th class="text-center" style="width: 10%;"> Instock </th>
-                <th class="text-center" style="width: 10%;"> Buying Price </th>
-                <th class="text-center" style="width: 10%;"> Saleing Price </th>
+                <th class="text-center" style="width: 10%;"> Category </th>
+                <th class="text-center" style="width: 10%;"> Hovedlager </th>
+                <th class="text-center" style="width: 10%;"> KS lager </th>
+                <th class="text-center" style="width: 10%;"> Selling Price </th>
                 <th class="text-center" style="width: 10%;"> Product Added </th>
                 <th class="text-center" style="width: 100px;"> Actions </th>
               </tr>
@@ -46,7 +47,7 @@
                 <td> <?php echo remove_junk($product['name']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['categorie']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['quantity']); ?></td>
-                <td class="text-center"> <?php echo remove_junk($product['buy_price']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['ks_storage']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['sale_price']); ?></td>
                 <td class="text-center"> <?php echo read_date($product['date']); ?></td>
                 <td class="text-center">
@@ -62,7 +63,7 @@
               </tr>
              <?php endforeach; ?>
             </tbody>
-          </tabel>
+          </table>
         </div>
       </div>
     </div>
