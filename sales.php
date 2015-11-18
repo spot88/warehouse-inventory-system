@@ -1,13 +1,14 @@
 <?php
   $page_title = 'All sale';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+
+// Checking userlevel
    page_require_level(3);
-?>
-<?php
+
 $sales = find_all_sale();
-?>
-<?php include_once('layouts/header.php'); ?>
+
+include_once('layouts/header.php'); ?>
+
 <div class="row">
   <div class="col-md-6">
     <?php echo display_msg($msg); ?>

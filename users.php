@@ -3,7 +3,7 @@
   require_once('includes/load.php');
 ?>
 <?php
-// Checkin What level user has permission to view this page
+// Checking userlevel
  page_require_level(1);
 //pull out all user form database
  $all_users = find_all_user();
