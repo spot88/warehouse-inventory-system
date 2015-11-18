@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `sale_price` decimal(25,2) NOT NULL,
   `categorie_id` int(11) unsigned NOT NULL,
   `media_id` int(11) DEFAULT '0',
-  'product_number' varchar(15) DEFAULT NULL;
+  `product_number` varchar(15) DEFAULT NULL,
   `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -41,7 +41,8 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `product_id` int(11) unsigned NOT NULL,
   `qty` int(11) NOT NULL,
   `price` decimal(25,2) NOT NULL,
-  `date` date NOT NULL
+  `date` date NOT NULL,
+  `FK_userID` int(11) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -55,7 +56,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_level` int(11) NOT NULL,
   `image` varchar(255) DEFAULT 'no_image.jpg',
   `status` int(1) NOT NULL,
-  `last_login` datetime DEFAULT NULL
+  `last_login` datetime DEFAULT NULL,
+  `email` VARCHAR(255)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 
@@ -110,7 +112,9 @@ ALTER TABLE `products`
 
 ALTER TABLE `sales`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`);
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `FK_userID` (`FK_userID`);
+
 
 
 -- Indexes for table `users`
@@ -172,7 +176,8 @@ ALTER TABLE `products`
 -- Constraints for table `sales`
 
 ALTER TABLE `sales`
-  ADD CONSTRAINT `SK` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `SK` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_UID` FOREIGN KEY (`FK_userID`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 -- Constraints for table `users`
