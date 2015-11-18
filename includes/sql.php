@@ -181,21 +181,21 @@ function tableExists($table){
     return($db->num_rows($result) === 0 ? true : false);
   }
   /*--------------------------------------------------------------*/
-  /* Function for cheaking which user level has access to page
+  /* Function for checking which user level has access to page
   /*--------------------------------------------------------------*/
    function page_require_level($require_level){
      global $session;
      $current_user = current_user();
      $login_level = find_by_groupLevel($current_user['user_level']);
-     //if user not login
+     //if user not logged in
      if (!$session->isUserLoggedIn(true)):
             $session->msg('d','Please login...');
             redirect('index.php', false);
-      //if Group status Deactive
+      //if Group status Deactivate
      elseif($login_level['group_status'] === '0'):
-           $session->msg('d','This level user has been band!');
+           $session->msg('d','This account has been locked!');
            redirect('home.php',false);
-      //cheackin log in User level and Require level is Less than or equal to
+      //checking log in User level and Require level is Less than or equal to
      elseif($current_user['user_level'] <= (int)$require_level):
               return true;
       else:
