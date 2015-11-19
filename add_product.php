@@ -24,7 +24,7 @@
      }
      $date    = make_date();
      $query  = "INSERT INTO products (";
-     $query .=" name,quantity,ks_storage,sale_price,categorie_id,media_id,date";
+     $query .=" name, quantity, ks_storage, sale_price, categorie_id, media_id, `product_number`, date";
      $query .=") VALUES (";
      $query .=" '{$p_name}', '{$p_qty}', '{$p_buy}', '{$p_sale}', '{$p_cat}', '{$media_id}', '{$p_number}', '{$date}'";
      $query .=")";
@@ -68,14 +68,14 @@
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" placeholder="Product Title">
+                  <input type="text" class="form-control" name="product-title" placeholder="Produktnavn">
                </div>
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
                     <select class="form-control" name="product-categorie">
-                      <option value="">Select Product Category</option>
+                      <option value="">Produktkategori</option>
                     <?php  foreach ($all_categories as $cat): ?>
                       <option value="<?php echo (int)$cat['id'] ?>">
                         <?php echo $cat['name'] ?></option>
@@ -84,7 +84,7 @@
                   </div>
                   <div class="col-md-6">
                     <select class="form-control" name="product-photo">
-                      <option value="">Select Product Photo</option>
+                      <option value="">Produktfoto</option>
                     <?php  foreach ($all_photo as $photo): ?>
                       <option value="<?php echo (int)$photo['id'] ?>">
                         <?php echo $photo['file_name'] ?></option>
@@ -110,7 +110,6 @@
                        <i>Stk</i>
                      </span>
                      <input type="number" class="form-control" name="ks_storage" placeholder="KS-lager">
-                     <span class="input-group-addon">.00</span>
                   </div>
                  </div>
                   <div class="col-md-4">
@@ -119,16 +118,14 @@
                         <i>Pris</i>
                       </span>
                       <input type="number" class="form-control" name="saleing-price" placeholder="Pris">
-                      <span class="input-group-addon">.00</span>
                    </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-4" style="padding-top: 15px">
                     <div class="input-group">
                       <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-usd"></i>
+                        <i class="glyphicon glyphicon-info-sign"></i>
                       </span>
-                      <input type="number" class="form-control" name="product-number" placeholder="Product Number">
-                      <span class="input-group-addon">.00</span>
+                      <input type="number" class="form-control" name="product-number" placeholder="Siebelkode">
                    </div>
                   </div>
                </div>
