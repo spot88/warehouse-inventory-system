@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `name` varchar(255) NOT NULL,
   `quantity` int(11) unsigned DEFAULT NULL,
   `ks_storage` int(11) DEFAULT NULL,
+  `buy_price` decimal(25,2),
   `sale_price` decimal(25,2) NOT NULL,
   `categorie_id` int(11) unsigned NOT NULL,
   `media_id` int(11) DEFAULT '0',

@@ -362,12 +362,13 @@ function find_sale_by_dates($start_date, $end_date)
     global $db;
     $start_date = date("Y-m-d", strtotime($start_date));
     $end_date = date("Y-m-d", strtotime($end_date));
-    $sql = "SELECT s.date, p.name,p.sale_price,p.buy_price,";
+    $sql = "SELECT s.date, p.name,p.sale_price,p.buy_price,u.username,s.FK_userID, ";
     $sql .= "COUNT(s.product_id) AS total_records,";
     $sql .= "SUM(s.qty) AS total_sales,";
     $sql .= "SUM(p.sale_price * s.qty) AS total_saleing_price,";
     $sql .= "SUM(p.buy_price * s.qty) AS total_buying_price ";
     $sql .= "FROM sales s ";
+    $sql .= "JOIN users u ON s.FK_userID ";
     $sql .= "LEFT JOIN products p ON s.product_id = p.id";
     $sql .= " WHERE s.date BETWEEN '{$start_date}' AND '{$end_date}'";
     $sql .= " GROUP BY DATE(s.date),p.name";
