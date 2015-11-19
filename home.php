@@ -75,7 +75,7 @@
            <td class="text-center"><?php echo count_id();?></td>
            <td><?php echo remove_junk(first_character($recent_sale['name'])); ?> </td>
            <td><?php echo remove_junk(ucfirst($recent_sale['date'])); ?></td>
-           <td><?php echo remove_junk(first_character($recent_sale['price'])); ?></td>
+           <td><?php echo remove_junk(first_character($recent_sale['price'])); ?>,-</td>
         </tr>
 
        <?php endforeach; ?>
@@ -105,7 +105,7 @@
                 <?php endif;?>
                 <?php echo remove_junk(first_character($recent_product['name']));?>
                   <span class="label label-warning pull-right">
-                 <?php echo (int)$recent_product['sale_price']; ?>
+                 <?php echo (int)$recent_product['sale_price']; ?>,-
                   </span>
                 </h4>
                 <span class="list-group-item-text pull-right">
