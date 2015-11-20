@@ -121,8 +121,8 @@ if (isset($_POST['submit'])) {
             <?php foreach ($results as $result): ?>
                 <tr>
                     <td class=""><?php echo remove_junk($result['date']); ?></td>
-                    <td class="desc"><h6><?php echo remove_junk(ucfirst($result['name'])); ?></h6></td>
-                    <td class="desc"><h6><?php echo remove_junk(ucfirst($result['username'])); ?></h6></td>
+                    <td class="desc"><?php echo remove_junk(ucfirst($result['name'])); ?></h6></td>
+                    <td class="desc"><?php echo remove_junk(ucfirst($result['username'])); ?></h6></td>
                     <td class="text-right"><?php echo remove_junk($result['buy_price']); ?></td>
                     <td class="text-right"><?php echo remove_junk($result['sale_price']); ?></td>
                     <td class="text-right"><?php echo remove_junk($result['total_sales']); ?></td>

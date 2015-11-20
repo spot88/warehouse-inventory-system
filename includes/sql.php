@@ -321,7 +321,7 @@ function find_higest_saleing_product($limit)
 function find_all_sale()
 {
     global $db;
-    $sql = "SELECT s.id,s.qty,s.price,s.date,p.name";
+    $sql = "SELECT s.id, s.qty, s.price, s.date, p.name, s.comment, s.custnr";
     $sql .= " FROM sales s";
     $sql .= " LEFT JOIN products p ON s.product_id = p.id";
     $sql .= " ORDER BY s.date DESC";

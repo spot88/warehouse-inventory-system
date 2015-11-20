@@ -39,9 +39,11 @@ include_once('layouts/header.php'); ?>
                     <tr>
                         <th class="text-center" style="width: 50px;">#</th>
                         <th> Product name</th>
-                        <th class="text-center" style="width: 15%;"> Quantity</th>
-                        <th class="text-center" style="width: 15%;"> Total</th>
-                        <th class="text-center" style="width: 15%;"> Date</th>
+                        <th class="text-center" style="width: 5%;"> Antall</th>
+                        <th class="text-center" style="width: 5%;"> Total</th>
+                        <th class="text-center" style="width: 5%;"> Dato</th>
+                        <th class="text-center" style="width: 5%;"> Kundenummer</th>
+                        <th class="text-center" style="width: 50%;"> Kommentar</th>
                         <th class="text-center" style="width: 100px;"> Actions</th>
                     </tr>
                     </thead>
@@ -53,6 +55,8 @@ include_once('layouts/header.php'); ?>
                             <td class="text-center"><?php echo (int)$sale['qty']; ?></td>
                             <td class="text-center"><?php echo remove_junk($sale['price']); ?></td>
                             <td class="text-center"><?php echo $sale['date']; ?></td>
+                            <td class="text-center"><?php echo $sale['custnr']; ?></td>
+                            <td class="text-center"><?php echo $sale['comment']; ?></td>
                             <td class="text-center">
                                 <div class="btn-group">
                                     <a href="edit_sale.php?id=<?php echo (int)$sale['id']; ?>"
