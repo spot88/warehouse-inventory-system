@@ -8,7 +8,7 @@ $all_photo = find_all('media');
 ?>
 <?php
 if (isset($_POST['add_product'])) {
-    $req_fields = array('product-title', 'product-categorie', 'product-quantity', 'saleing-price', 'buying-price');
+    $req_fields = array('product-title', 'product-categorie', 'product-quantity', 'saleing-price', 'ks_storage');
     validate_fields($req_fields);
     if (empty($errors)) {
         $p_name = remove_junk($db->escape($_POST['product-title']));
