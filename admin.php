@@ -124,11 +124,7 @@ $recent_sales = find_recent_sale_added('5')
                     <?php foreach ($recent_sales as $recent_sale): ?>
                         <tr>
                             <td class="text-center"><?php echo count_id(); ?></td>
-                            <td>
-                                <a href="edit_sale.php?id=<?php echo (int)$recent_sale['id']; ?>">
-                                    <?php echo remove_junk(first_character($recent_sale['name'])); ?>
-                                </a>
-                            </td>
+                            <td><?php echo remove_junk(first_character($recent_sale['name'])); ?></td>
                             <td><?php echo remove_junk(ucfirst($recent_sale['date'])); ?></td>
                             <td><?php echo remove_junk(first_character($recent_sale['price'])); ?>,-</td>
                             <td><?php echo remove_junk(first_character($recent_sale['username'])); ?></td>
