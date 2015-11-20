@@ -1,7 +1,7 @@
 <?php
 $page_title = 'Add Sale';
 require_once('includes/load.php');
-// Checking what level user has permission to view this page
+// Checking userlevel
 page_require_level(3);
 
 
@@ -13,13 +13,15 @@ if (isset($_POST['add_sale'])) {
         $s_qty = $db->escape((int)$_POST['quantity']);
         $s_total = $db->escape($_POST['total']);
         $date = $db->escape($_POST['date']);
+        $custnr = $db->escape($_POST['custnr']);
+        $comment = $db->escape($_POST['comment']);
         $s_date = make_date();
         $s_userID = $_SESSION['user_id'];
 
         $sql = "INSERT INTO sales (";
-        $sql .= " product_id, qty, price, date, FK_userID";
+        $sql .= " product_id, qty, price, date, custnr, comment, FK_userID";
         $sql .= ") VALUES (";
-        $sql .= "'{$p_id}','{$s_qty}','{$s_total}','{$s_date}','$s_userID'";
+        $sql .= "'{$p_id}', '{$s_qty}', '{$s_total}', '{$s_date}', '{$custnr}', '{$comment}','$s_userID'";
         $sql .= ")";
 
         if ($db->query($sql)) {
@@ -47,8 +49,7 @@ if (isset($_POST['add_sale'])) {
             <span class="input-group-btn">
               <button type="submit" class="btn btn-primary">Find It</button>
             </span>
-                    <input type="text" id="sug_input" class="form-control" name="title"
-                           placeholder="Search for product name">
+                    <input type="text" id="sug_input" class="form-control" name="title" placeholder="Search for product name" autofocus>
                 </div>
                 <div id="result" class="list-group"></div>
             </div>
@@ -62,19 +63,21 @@ if (isset($_POST['add_sale'])) {
             <div class="panel-heading clearfix">
                 <strong>
                     <span class="glyphicon glyphicon-th"></span>
-                    <span>Sale Eidt</span>
+                    <span>Salg</span>
                 </strong>
             </div>
             <div class="panel-body">
                 <form method="post" action="add_sale.php">
                     <table class="table table-bordered">
                         <thead>
-                        <th> Item</th>
-                        <th> Price</th>
-                        <th> Qty</th>
+                        <th> Produkt</th>
+                        <th> Pris</th>
+                        <th> Antall</th>
                         <th> Total</th>
-                        <th> Date</th>
-                        <th> Action</th>
+                        <th> Dato</th>
+                        <th> Kundenummer</th>
+                        <th> Kommentar</th>
+                        <th> </th>
                         </thead>
                         <tbody id="product_info"></tbody>
                     </table>

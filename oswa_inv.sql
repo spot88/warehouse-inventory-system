@@ -43,6 +43,8 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `qty` int(11) NOT NULL,
   `price` decimal(25,2) NOT NULL,
   `date` date NOT NULL,
+  `custnr` int(11) NOT NULL,
+  `comment` text,
   `FK_userID` int(11) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
