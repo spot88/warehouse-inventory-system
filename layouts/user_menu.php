@@ -8,7 +8,7 @@
     <li>
         <a href="sales.php">
         <i class="glyphicon glyphicon-signal"></i>
-        <span>Salg</span>
+        <span>Dine salg</span>
         </a>
     </li>
     <li>
