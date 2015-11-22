@@ -281,7 +281,7 @@ function update_product_qty($qty, $p_id)
     global $db;
     $qty = (int)$qty;
     $id = (int)$p_id;
-    $sql = "UPDATE products SET quantity=quantity -'{$qty}' WHERE id = '{$id}'";
+    $sql = "UPDATE products SET ks_storage=ks_storage -'{$qty}' WHERE id = '{$id}'";
     $result = $db->query($sql);
     return ($db->affected_rows() === 1 ? true : false);
 
@@ -302,7 +302,7 @@ function find_recent_product_added($limit)
 }
 
 /*--------------------------------------------------------------*/
-/* Function for Find Highest saleing Product
+/* Function for Find Highest selling Product
 /*--------------------------------------------------------------*/
 function find_higest_saleing_product($limit)
 {
