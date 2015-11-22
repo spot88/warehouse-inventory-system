@@ -50,7 +50,7 @@
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-signal"></i>
-       <span>Sales Report</span>
+       <span>Report</span>
       </a>
       <ul class="nav submenu">
         <li><a href="sales_report.php">Sales by dates </a></li>

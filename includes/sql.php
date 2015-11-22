@@ -409,4 +409,9 @@ function  monthlySales($year)
     return find_by_sql($sql);
 }
 
-?>
+/* Return storagestatus */
+function storage_status()
+{
+    $sql = "SELECT name, ks_storage, quantity FROM products";
+    return find_by_sql($sql);
+}

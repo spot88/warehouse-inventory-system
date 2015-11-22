@@ -11,9 +11,11 @@ $c_sale = count_by_id('sales');
 $c_user = count_by_id('users');
 $products_sold = find_higest_saleing_product('10');
 $recent_products = find_recent_product_added('5');
-$recent_sales = find_recent_sale_added('5')
-?>
-<?php include_once('layouts/header.php'); ?>
+$recent_sales = find_recent_sale_added('5');
+$storageStatus = storage_status();
+
+
+include_once('layouts/header.php'); ?>
 
 <div class="row">
     <div class="col-md-6">
@@ -141,31 +143,29 @@ $recent_sales = find_recent_sale_added('5')
             <div class="panel-heading">
                 <strong>
                     <span class="glyphicon glyphicon-th"></span>
-                    <span>Recently Added Products</span>
+                    <span>Lagerstatus</span>
                 </strong>
             </div>
             <div class="panel-body">
-
-                <div class="list-group">
-                    <?php foreach ($recent_products as $recent_product): ?>
-                        <a class="list-group-item clearfix" href="edit_product.php?id=<?php echo (int)$recent_product['id']; ?>">
-                            <h4 class="list-group-item-heading">
-                                <?php if ($recent_product['media_id'] === '0'): ?>
-                                    <img class="img-avatar img-circle" src="uploads/products/no_image.jpg" alt="">
-                                <?php else: ?>
-                                    <img class="img-avatar img-circle" src="uploads/products/<?php echo $recent_product['image']; ?>" alt=""/>
-                                <?php endif; ?>
-                                <?php echo remove_junk(first_character($recent_product['name'])); ?>
-                                <span class="label label-warning pull-right">
-                 <?php echo (int)$recent_product['sale_price']; ?>,-
-                  </span>
-                            </h4>
-                <span class="list-group-item-text pull-right">
-                <?php echo remove_junk(first_character($recent_product['categorie'])); ?>
-              </span>
-                        </a>
+                <table class="table table-striped table-bordered table-condensed">
+                    <thead>
+                    <tr>
+                        <th>Produktnavn</th>
+                        <th>KS-lager</th>
+                        <th>Hovedlager</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($storageStatus as $storage): ?>
+                        <tr>
+                            <td><?php echo first_character($storage['name']); ?></td>
+                            <td><?php echo ($storage['ks_storage']); ?></td>
+                            <td><?php echo ($storage['quantity']); ?></td>
+                        </tr>
                     <?php endforeach; ?>
-                </div>
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>
