@@ -9,6 +9,12 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--- Dumping data for table 'categories'
+
+INSERT INTO `categories` (`id`, `name`) VALUES
+(1, 'TV'),
+(2, 'ASUS'),
+(3, 'Internett');
 
 -- Table structure for table `media`
 
@@ -67,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `user_level`, `image`, `status`, `last_login`) VALUES
-(1, ' Admin User', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'tafjord.jpg', 1, '2015-09-27 22:00:53'),
+(1, 'Admin User', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'tafjord.jpg', 1, '2015-09-27 22:00:53'),
 (2, 'Leveranse', 'leveranse', 'ba36b97a41e7faf742ab09bf88405ac04f99599a', 2, 'tafjord.jpg', 1, '2015-09-27 21:59:59'),
 (3, 'Kundesenter', 'ks', '12dea96fec20593566ab75692c9949596833adc9', 3, 'tafjord.jpg', 1, '2015-09-27 22:00:15');
 
