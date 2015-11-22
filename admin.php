@@ -118,7 +118,7 @@ include_once('layouts/header.php'); ?>
                         <th class="text-center" style="width: 50px;">#</th>
                         <th>Produkt</th>
                         <th>Dato</th>
-                        <th>Antall solgt</th>
+                        <th>Pris</th>
                         <th>Bruker</th>
                     </tr>
                     </thead>

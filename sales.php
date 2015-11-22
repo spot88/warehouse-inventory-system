@@ -53,7 +53,7 @@ include_once('layouts/header.php'); ?>
                             <td class="text-center"><?php echo count_id(); ?></td>
                             <td><?php echo remove_junk($sale['name']); ?></td>
                             <td class="text-center"><?php echo (int)$sale['qty']; ?></td>
-                            <td class="text-center"><?php echo remove_junk($sale['price']); ?></td>
+                            <td class="text-center"><?php echo remove_junk($sale['price']); ?>,-</td>
                             <td class="text-center"><?php echo $sale['date']; ?></td>
                             <td class="text-center"><?php echo $sale['custnr']; ?></td>
                             <td class="text-center"><?php echo $sale['comment']; ?></td>
