@@ -135,7 +135,7 @@ if (isset($_POST['add_product'])) {
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-info-sign"></i>
                       </span>
-                                        <input type="number" class="form-control" name="product-number" placeholder="Siebelkode">
+                                        <input type="text" class="form-control" name="product-number" placeholder="Siebelkode">
                                     </div>
                                 </div>
                             </div>
