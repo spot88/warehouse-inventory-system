@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `user_level` int(11) NOT NULL,
-  `image` varchar(255) DEFAULT 'no_image.jpg',
+  `image` varchar(255) DEFAULT 'tafjord.jpg',
   `status` int(1) NOT NULL,
   `last_login` datetime DEFAULT NULL,
   `email` VARCHAR(255)
