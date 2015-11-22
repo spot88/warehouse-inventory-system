@@ -58,7 +58,7 @@ if (isset($_POST['add_product'])) {
             <div class="panel-heading">
                 <strong>
                     <span class="glyphicon glyphicon-th"></span>
-                    <span>Add New Product</span>
+                    <span>Legg til produkt</span>
                 </strong>
             </div>
             <div class="panel-body">
@@ -140,7 +140,7 @@ if (isset($_POST['add_product'])) {
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" name="add_product" class="btn btn-danger">Add product</button>
+                        <button type="submit" name="add_product" class="btn btn-danger">Legg til </button>
                     </form>
                 </div>
             </div>

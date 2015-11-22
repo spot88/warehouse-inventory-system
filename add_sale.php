@@ -47,9 +47,9 @@ if (isset($_POST['add_sale'])) {
             <div class="form-group">
                 <div class="input-group">
             <span class="input-group-btn">
-              <button type="submit" class="btn btn-primary">Find It</button>
+              <button type="submit" class="btn btn-primary">Søk</button>
             </span>
-                    <input type="text" id="sug_input" class="form-control" name="title" placeholder="Search for product name" autofocus>
+                    <input type="text" id="sug_input" class="form-control" name="title" placeholder="Søk etter produkt" autofocus>
                 </div>
                 <div id="result" class="list-group"></div>
             </div>

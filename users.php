@@ -1,8 +1,8 @@
 <?php
   $page_title = 'All User';
   require_once('includes/load.php');
-?>
-<?php
+
+
 // Checking userlevel
  page_require_level(1);
 //pull out all user form database
@@ -20,21 +20,21 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Users</span>
+          <span>Brukere</span>
        </strong>
-         <a href="add_user.php" class="btn btn-info pull-right">Add New User</a>
+         <a href="add_user.php" class="btn btn-info pull-right">Ny bruker</a>
       </div>
      <div class="panel-body">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <th class="text-center" style="width: 50px;">#</th>
-            <th>Name </th>
-            <th>Username</th>
-            <th class="text-center" style="width: 15%;">User Role</th>
+            <th>Navn </th>
+            <th>Brukernavn</th>
+            <th class="text-center" style="width: 15%;">Rolle</th>
             <th class="text-center" style="width: 10%;">Status</th>
-            <th style="width: 20%;">Last Login</th>
-            <th class="text-center" style="width: 100px;">Actions</th>
+            <th style="width: 20%;">Sist innlogget</th>
+            <th class="text-center" style="width: 100px;">Handlinger</th>
           </tr>
         </thead>
         <tbody>
@@ -46,9 +46,9 @@
            <td class="text-center"><?php echo remove_junk(ucwords($a_user['group_name']))?></td>
            <td class="text-center">
            <?php if($a_user['status'] === '1'): ?>
-            <span class="label label-success"><?php echo "Active"; ?></span>
+            <span class="label label-success"><?php echo "Aktiv"; ?></span>
           <?php else: ?>
-            <span class="label label-danger"><?php echo "Deactive"; ?></span>
+            <span class="label label-danger"><?php echo "Inaktiv"; ?></span>
           <?php endif;?>
            </td>
            <td><?php echo read_date($a_user['last_login'])?></td>

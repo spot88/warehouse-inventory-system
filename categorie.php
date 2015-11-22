@@ -41,15 +41,15 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Category</span>
+            <span>Ny kategori</span>
          </strong>
         </div>
         <div class="panel-body">
           <form method="post" action="categorie.php">
             <div class="form-group">
-                <input type="text" class="form-control" name="categorie-name" placeholder="Category Name">
+                <input type="text" class="form-control" name="categorie-name" placeholder="Kategorinavn">
             </div>
-            <button type="submit" name="add_cat" class="btn btn-primary">Add category</button>
+            <button type="submit" name="add_cat" class="btn btn-primary">Legg til</button>
         </form>
         </div>
       </div>
@@ -59,7 +59,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>All Categories</span>
+          <span>Kategorier</span>
        </strong>
       </div>
         <div class="panel-body">
@@ -67,8 +67,8 @@
             <thead>
                 <tr>
                     <th class="text-center" style="width: 50px;">#</th>
-                    <th>Categories</th>
-                    <th class="text-center" style="width: 100px;">Actions</th>
+                    <th>Kategorier</th>
+                    <th class="text-center" style="width: 100px;">Handlinger</th>
                 </tr>
             </thead>
             <tbody>

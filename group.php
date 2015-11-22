@@ -17,19 +17,19 @@
     <div class="panel-heading clearfix">
       <strong>
         <span class="glyphicon glyphicon-th"></span>
-        <span>Groups</span>
+        <span>Grupper</span>
      </strong>
-       <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Add New Group</a>
+       <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Ny gruppe</a>
     </div>
      <div class="panel-body">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th class="text-center" style="width: 50px;">#</th>
-            <th>Group Name</th>
-            <th class="text-center" style="width: 20%;">Group Level</th>
+            <th>Gruppenavn</th>
+            <th class="text-center" style="width: 20%;">Gruppe level</th>
             <th class="text-center" style="width: 15%;">Status</th>
-            <th class="text-center" style="width: 100px;">Actions</th>
+            <th class="text-center" style="width: 100px;">Handlinger</th>
           </tr>
         </thead>
         <tbody>
@@ -42,9 +42,9 @@
            </td>
            <td class="text-center">
            <?php if($a_group['group_status'] === '1'): ?>
-            <span class="label label-success"><?php echo "Active"; ?></span>
+            <span class="label label-success"><?php echo "Aktiv"; ?></span>
           <?php else: ?>
-            <span class="label label-danger"><?php echo "Deactive"; ?></span>
+            <span class="label label-danger"><?php echo "Inaktiv"; ?></span>
           <?php endif;?>
            </td>
            <td class="text-center">

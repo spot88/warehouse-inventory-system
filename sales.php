@@ -26,11 +26,11 @@ include_once('layouts/header.php'); ?>
             <div class="panel-heading clearfix">
                 <strong>
                     <span class="glyphicon glyphicon-th"></span>
-                    <span>All Sales</span>
+                    <span>Salg</span>
                 </strong>
 
                 <div class="pull-right">
-                    <a href="add_sale.php" class="btn btn-primary">Add sale</a>
+                    <a href="add_sale.php" class="btn btn-primary">Nytt salg</a>
                 </div>
             </div>
             <div class="panel-body">
@@ -38,13 +38,13 @@ include_once('layouts/header.php'); ?>
                     <thead>
                     <tr>
                         <th class="text-center" style="width: 50px;">#</th>
-                        <th> Product name</th>
+                        <th> Produkt</th>
                         <th class="text-center" style="width: 5%;"> Antall</th>
                         <th class="text-center" style="width: 5%;"> Total</th>
                         <th class="text-center" style="width: 5%;"> Dato</th>
                         <th class="text-center" style="width: 5%;"> Kundenummer</th>
                         <th class="text-center" style="width: 50%;"> Kommentar</th>
-                        <th class="text-center" style="width: 100px;"> Actions</th>
+                        <th class="text-center" style="width: 100px;"> Handlinger</th>
                     </tr>
                     </thead>
                     <tbody>

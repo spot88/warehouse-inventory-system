@@ -15,7 +15,7 @@
       <div class="panel panel-default">
         <div class="panel-heading clearfix">
          <div class="pull-right">
-           <a href="add_product.php" class="btn btn-primary">Add New</a>
+           <a href="add_product.php" class="btn btn-primary">Legg til</a>
          </div>
         </div>
         <div class="panel-body">
@@ -23,14 +23,14 @@
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
-                <th> Photo</th>
-                <th> Product Title </th>
-                <th class="text-center" style="width: 10%;"> Category </th>
+                <th> Bilde</th>
+                <th> Produkt</th>
+                <th class="text-center" style="width: 10%;"> Kategori </th>
                 <th class="text-center" style="width: 10%;"> Hovedlager </th>
                 <th class="text-center" style="width: 10%;"> KS lager </th>
-                <th class="text-center" style="width: 10%;"> Selling Price </th>
-                <th class="text-center" style="width: 10%;"> Product Added </th>
-                <th class="text-center" style="width: 100px;"> Actions </th>
+                <th class="text-center" style="width: 10%;"> Salgspris </th>
+                <th class="text-center" style="width: 10%;"> Produkt lagt til</th>
+                <th class="text-center" style="width: 100px;"> Handlinger </th>
               </tr>
             </thead>
             <tbody>
