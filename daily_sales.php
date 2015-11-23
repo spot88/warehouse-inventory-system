@@ -2,7 +2,7 @@
 $page_title = 'Daily Sales';
 require_once('includes/load.php');
 // Checking userlevel
-page_require_level(1);
+page_require_level(3);
 ?>
 
 <?php
