@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---- Dumping data for table 'categories'
+-- Dumping data for table 'categories'
 
 INSERT INTO `categories` (`id`, `name`) VALUES
 (1, 'TV'),
