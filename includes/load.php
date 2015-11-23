@@ -1,6 +1,6 @@
 <?php
 // -----------------------------------------------------------------------
-// DEFINE SEPERATOR ALIASES
+// DEFINE SEPARATOR ALIASES
 // -----------------------------------------------------------------------
 define("URL_SEPARATOR", '/');
 define("DS", DIRECTORY_SEPARATOR);
