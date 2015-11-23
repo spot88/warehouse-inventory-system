@@ -99,48 +99,52 @@ if (isset($_POST['add_product'])) {
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-group">
-                     <span class="input-group-addon">
-                      <i>Stk</i>
-                     </span>
+                                     <span class="input-group-addon">
+                                      <i>Stk</i>
+                                     </span>
                                         <input type="number" class="form-control" name="product-quantity" placeholder="Hovedlager">
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="input-group">
-                     <span class="input-group-addon">
-                       <i>Stk</i>
-                     </span>
+                                     <span class="input-group-addon">
+                                       <i>Stk</i>
+                                     </span>
                                         <input type="number" class="form-control" name="ks_storage" placeholder="KS-lager">
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="input-group">
-                     <span class="input-group-addon">
-                       <i class="glyphicon glyphicon-info-sign"></i>
-                     </span>
-                                        <input type="number" class="form-control" name="buying-price" placeholder="Innkjøpspris">
-                                        <span class="input-group-addon">.00</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4" style="padding-top: 15px">
-                                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-info-sign"></i>
-                      </span>
-                                        <input type="number" class="form-control" name="saleing-price" placeholder="Pris">
-                                    </div>
-                                </div>
-                                <div class="col-md-4" style="padding-top: 15px">
-                                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-info-sign"></i>
-                      </span>
+                                      <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-info-sign"></i>
+                                      </span>
                                         <input type="text" class="form-control" name="product-number" placeholder="Siebelkode">
                                     </div>
                                 </div>
+
+                                <div class="col-md-4"  style="padding-top: 15px">
+                                    <div class="input-group">
+                                         <span class="input-group-addon">
+                                           <i class="glyphicon glyphicon-info-sign"></i>
+                                         </span>
+                                        <input type="number" class="form-control" name="buying-price" placeholder="Innkjøpspris">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4" style="padding-top: 15px">
+                                    <div class="input-group">
+                                      <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-info-sign"></i>
+                                      </span>
+                                        <input type="number" class="form-control" name="saleing-price" placeholder="Pris">
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <button type="submit" name="add_product" class="btn btn-danger">Legg til </button>
+                        <button type="submit" name="add_product" class="btn btn-danger">Legg til</button>
                     </form>
                 </div>
             </div>
