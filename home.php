@@ -29,16 +29,16 @@ $storageStatus = storage_status();
                             <div class="panel-heading">
                                 <strong>
                                     <span class="glyphicon glyphicon-th"></span>
-                                    <span>Highest Selling Products</span>
+                                    <span>Mest solgte produkter</span>
                                 </strong>
                             </div>
                             <div class="panel-body">
                                 <table class="table table-striped table-bordered table-condensed">
                                     <thead>
                                     <tr>
-                                        <th>Title</th>
-                                        <th>Total Sold</th>
-                                        <th>Total Quantity</th>
+                                        <th>Produkt</th>
+                                        <th>Antall solgt</th>
+                                        <th>Totalt antall</th>
                                     <tr>
                                     </thead>
                                     <tbody>
@@ -59,7 +59,7 @@ $storageStatus = storage_status();
                             <div class="panel-heading">
                                 <strong>
                                     <span class="glyphicon glyphicon-th"></span>
-                                    <span>LATEST SALES</span>
+                                    <span>Siste salg</span>
                                 </strong>
                             </div>
                             <div class="panel-body">
@@ -67,9 +67,9 @@ $storageStatus = storage_status();
                                     <thead>
                                     <tr>
                                         <th class="text-center" style="width: 50px;">#</th>
-                                        <th>Product Name</th>
-                                        <th>Date</th>
-                                        <th>Total Sale</th>
+                                        <th>Produkt</th>
+                                        <th>Dato</th>
+                                        <th>Pris</th>
                                         <th>Bruker</th>
                                     </tr>
                                     </thead>
@@ -94,7 +94,7 @@ $storageStatus = storage_status();
                             <div class="panel-heading">
                                 <strong>
                                     <span class="glyphicon glyphicon-th"></span>
-                                    <span>Recently Added Products</span>
+                                    <span>Lagerstatus</span>
                                 </strong>
                             </div>
                             <div class="panel-body">
