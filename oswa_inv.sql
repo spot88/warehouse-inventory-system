@@ -5,7 +5,7 @@ USE oswa_inv;
 -- Table structure for table `categories`
 
 CREATE TABLE IF NOT EXISTS `categories` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -19,7 +19,7 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 -- Table structure for table `media`
 
 CREATE TABLE IF NOT EXISTS `media` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `file_name` varchar(255) NOT NULL,
   `file_type` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -39,7 +39,7 @@ INSERT INTO `media` (`id`, `file_name`, `file_type`) VALUES
 -- Table structure for table `products`
 
 CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `quantity` int(11) unsigned DEFAULT NULL,
   `ks_storage` int(11) DEFAULT NULL,
@@ -66,7 +66,7 @@ INSERT INTO `products` (`id`, `name`, `quantity`, `ks_storage`, `buy_price`, `sa
 -- Table structure for table `sales`
 
 CREATE TABLE IF NOT EXISTS `sales` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(11) unsigned NOT NULL,
   `qty` int(11) NOT NULL,
   `price` decimal(25,2) NOT NULL,
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
 -- Table structure for table `users`
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -102,7 +102,7 @@ INSERT INTO `users` (`id`, `name`, `username`, `password`, `user_level`, `image`
 -- Table structure for table `user_groups`
 
 CREATE TABLE IF NOT EXISTS `user_groups` (
-  `id` int(11) NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `group_name` varchar(150) NOT NULL,
   `group_level` int(11) NOT NULL,
   `group_status` int(1) NOT NULL
