@@ -14,7 +14,8 @@ CREATE TABLE IF NOT EXISTS `categories` (
 INSERT INTO `categories` (`id`, `name`) VALUES
 (1, 'TV'),
 (2, 'ASUS'),
-(3, 'Internett');
+(3, 'Internett'),
+(4, 'Bedrift');
 
 -- Table structure for table `media`
 
