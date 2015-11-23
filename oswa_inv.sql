@@ -14,7 +14,8 @@ CREATE TABLE IF NOT EXISTS `categories` (
 INSERT INTO `categories` (`id`, `name`) VALUES
 (1, 'TV'),
 (2, 'ASUS'),
-(3, 'Internett');
+(3, 'Internett'),
+(4, 'Bedrift');
 
 -- Table structure for table `media`
 
@@ -27,14 +28,15 @@ CREATE TABLE IF NOT EXISTS `media` (
 -- Dumping data for table `media`
 
 INSERT INTO `media` (`id`, `file_name`, `file_type`) VALUES
-(1, 'Asus', 'jpg'),
-(2, 'Asus-ekstender', 'jpg'),
-(3, 'tv-startpakke', 'jpg'),
-(4, 'tv-mottaker', 'jpg'),
-(5, 'fjernkontroll', 'jpg'),
-(6, 'dekoder', 'jpg'),
-(7, 'harddisk', 'jpg'),
-(8, 'FMG', 'jpg');
+(1, 'Asus.jpg', 'jpg'),
+(2, 'Asus-ekstender.jpg', 'jpg'),
+(3, 'tv-startpakke.jpg', 'jpg'),
+(4, 'tv-mottaker.jpg', 'jpg'),
+(5, 'fjernkontroll.jpg', 'jpg'),
+(6, 'dekoder.jpg', 'jpg'),
+(7, 'harddisk.jpg', 'jpg'),
+(8, 'FMG.jpg', 'jpg'),
+(9, 'Cisco-sg.jpg', 'jpg');
 
 -- Table structure for table `products`
 
@@ -53,15 +55,16 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 -- Dumping data for table `products`
 
-INSERT INTO `products` (`id`, `name`, `quantity`, `ks_storage`, `buy_price`, `sale_price`, `categorie_id`, `media_id`, 'product_number', 'date') VALUES
-(1, 'Asus-RT-AC66U', '100', '15', '1090', '1090', '2', '1'),
-(2, 'Asus-Ekstender', '100', '15', '499', '899', '2', '2'),
-(3, 'TrådløsTV - Startpakke', '100', '25', '1090', '1390', '1', '3'),
-(4, 'TrådløsTV - Mottaker', '100', '25', '699', '990', '1', '4'),
-(5, 'Fjernkontroll', '100', '25', '99', '149', '1', '5'),
-(6, 'Ekstra Dekoder', '100', '25', '499', '49', '1', '6'),
-(7, 'Harddisk(PVR)', '100', '25', '349', '599', '1', '7'),
-(8, 'FMG Fibermodem', '10', '0', '899', '1090', '3', '8');
+INSERT INTO `products` (`id`, `name`, `quantity`, `ks_storage`, `buy_price`, `sale_price`, `categorie_id`, `media_id`, `product_number`, `date`) VALUES
+(1, 'ASUS RT-AC66U', 100, 15, '990.00', '1090.00', 2, 1, 'Customer', '2015-11-23 10:02:30'),
+(2, 'Asus Extender', 100, 15, '990.00', '1090.00', 2, 2, 'Customer', '2015-11-23 10:02:41'),
+(3, 'TrÃ¥dlÃ¸s Tv - Ekstra mottaker', 100, 15, '599.00', '990.00', 1, 4, 'DIV-1071', '2015-11-23 10:03:10'),
+(4, 'TrÃ¥dlÃ¸s TV - Startpakke', 100, 15, '990.00', '1390.00', 1, 3, 'DIV-760', '2015-11-23 10:03:30'),
+(5, 'Fjernkontroll', 100, 15, '99.00', '149.00', 1, 5, 'DIV-83', '2015-11-23 10:03:49'),
+(6, 'Ekstra Dekoder', 100, 15, '99.00', '49.00', 1, 6, '115', '2015-11-23 10:04:04'),
+(7, 'PVR Module', 100, 15, '399.00', '599.00', 1, 7, 'Customer', '2015-11-23 10:04:25'),
+(8, 'FMG-Fibermodem', 100, 15, '599.00', '999.00', 3, 8, 'Customer', '2015-11-23 10:04:41'),
+(9, 'Cisco SG-300', 100, 15, '599.00', '999.00', 4, 9, 'Customer', '2015-11-23 10:04:41');
 
 -- Table structure for table `sales`
 
