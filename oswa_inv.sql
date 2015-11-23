@@ -9,6 +9,12 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--- Dumping data for table 'categories'
+
+INSERT INTO `categories` (`id`, `name`) VALUES
+(1, 'TV'),
+(2, 'ASUS'),
+(3, 'Internett');
 
 -- Table structure for table `media`
 
@@ -18,6 +24,17 @@ CREATE TABLE IF NOT EXISTS `media` (
   `file_type` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- Dumping data for table `media`
+
+INSERT INTO `media` (`id`, `file_name`, `file_type`) VALUES
+(1, 'Asus', 'jpg'),
+(2, 'Asus-ekstender', 'jpg'),
+(3, 'tv-startpakke', 'jpg'),
+(4, 'tv-mottaker', 'jpg'),
+(5, 'fjernkontroll', 'jpg'),
+(6, 'dekoder', 'jpg'),
+(7, 'harddisk', 'jpg'),
+(8, 'FMG', 'jpg');
 
 -- Table structure for table `products`
 
@@ -34,6 +51,17 @@ CREATE TABLE IF NOT EXISTS `products` (
   `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- Dumping data for table `products`
+
+INSERT INTO `products` (`id`, `name`, `quantity`, `ks_storage`, `buy_price`, `sale_price`, `categorie_id`, `media_id`, 'product_number', 'date') VALUES
+(1, 'Asus-RT-AC66U', '100', '15', '1090', '1090', '2', '1'),
+(2, 'Asus-Ekstender', '100', '15', '499', '899', '2', '2'),
+(3, 'TrådløsTV - Startpakke', '100', '25', '1090', '1390', '1', '3'),
+(4, 'TrådløsTV - Mottaker', '100', '25', '699', '990', '1', '4'),
+(5, 'Fjernkontroll', '100', '25', '99', '149', '1', '5'),
+(6, 'Ekstra Dekoder', '100', '25', '499', '49', '1', '6'),
+(7, 'Harddisk(PVR)', '100', '25', '349', '599', '1', '7'),
+(8, 'FMG Fibermodem', '10', '0', '899', '1090', '3', '8');
 
 -- Table structure for table `sales`
 
@@ -67,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `user_level`, `image`, `status`, `last_login`) VALUES
-(1, ' Admin User', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'tafjord.jpg', 1, '2015-09-27 22:00:53'),
+(1, 'Admin User', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, 'tafjord.jpg', 1, '2015-09-27 22:00:53'),
 (2, 'Leveranse', 'leveranse', 'ba36b97a41e7faf742ab09bf88405ac04f99599a', 2, 'tafjord.jpg', 1, '2015-09-27 21:59:59'),
 (3, 'Kundesenter', 'ks', '12dea96fec20593566ab75692c9949596833adc9', 3, 'tafjord.jpg', 1, '2015-09-27 22:00:15');
 
