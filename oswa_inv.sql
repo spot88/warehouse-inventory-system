@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `media_id` int(11) DEFAULT '0',
   `product_number` varchar(15) DEFAULT NULL,
   `date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Dumping data for table `products`
 

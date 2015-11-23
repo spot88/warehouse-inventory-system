@@ -1,6 +1,6 @@
 <?php $user = current_user(); ?>
 <!DOCTYPE html>
-  <html lang="en">
+  <html lang="no">
     <head>
     <meta charset="UTF-8">
     <title><?php if (!empty($page_title))
