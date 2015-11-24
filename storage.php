@@ -19,37 +19,22 @@ $dbupdate = false;
 
 
 if (isset($_POST['storage'])) {
-    if ($is_admin) {
-        for ($i = 1; $i < $prod_id[0]['MAX(id)']; $i++) {
-            $I_hovedlager = $_POST["hovedlager-$i"];
-            $I_kslager = $_POST["ks-lager-$i"];
+    for ($i = 1; $i < $prod_id[0]['MAX(id)']; $i++) {
+        $I_hovedlager = $_POST["hovedlager-$i"];
+        $I_kslager = $_POST["ks-lager-$i"];
 
-            $A_hovedlager[$i] = $_POST["hovedlager-$i"];
-            $A_ks_lager[$i] = $_POST["ks-lager-$i"];
+        $A_hovedlager[$i] = $_POST["hovedlager-$i"];
+        $A_ks_lager[$i] = $_POST["ks-lager-$i"];
 
-            $query = "UPDATE products SET ks_storage = '{$I_kslager}', quantity = '{$I_hovedlager}-{$I_kslager}' WHERE id = '{$i}'";
-            $result = $db->query($query);
-            if ($result && $db->affected_rows() == 1) {
-                $dbupdate = true;
-            }
-        }
-
-    } else {
-        for ($i = 1; $i < $prod_id[0]['MAX(id)']; $i++) {
-            $I_hovedlager = $_POST["hovedlager-$i"];
-            $I_kslager = $_POST["ks-lager-$i"];
-
-            $A_hovedlager[$i] = $_POST["hovedlager-$i"];
-            $A_ks_lager[$i] = $_POST["ks-lager-$i"];
-
-            $query = "UPDATE products SET ks_storage = '{$I_kslager}', quantity = '{$I_hovedlager}-{$I_kslager}' WHERE id = '{$i}'"; //bug her som gjør at den ikke henter varer fra hovedlageret.
-            $result = $db->query($query);
-            if ($result && $db->affected_rows() == 1) {
-                $dbupdate = true;
-            }
+        //TODO legge inn if som sjekker om verdier har vært forandret og fiks quantity
+        $query = "UPDATE products SET ks_storage = '{$I_kslager}', quantity = '{$I_hovedlager}' WHERE id = '{$i}'";
+        $result = $db->query($query);
+        if ($result && $db->affected_rows() == 1) {
+            $dbupdate = true;
         }
     }
-    redirect('storage.php', false);
+
+
     //TODO viser ikke statusmelding på oppdatert lager.
     if ($dbupdate) {
         echo 'banana';
@@ -62,7 +47,7 @@ if (isset($_POST['storage'])) {
     $dbupdate = false;
 }
 
-    ?>
+?>
 
     <div class="row">
         <div class="col-md-12">
@@ -114,4 +99,4 @@ if (isset($_POST['storage'])) {
         </div>
     </div>
 
-    <?php include_once('layouts/footer.php'); ?>
+<?php include_once('layouts/footer.php'); ?>
