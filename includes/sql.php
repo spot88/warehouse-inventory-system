@@ -413,6 +413,13 @@ function  monthlySales($year)
 /* Return storagestatus */
 function storage_status()
 {
-    $sql = "SELECT name, ks_storage, quantity FROM products";
+    $sql = "SELECT name, ks_storage, quantity, id FROM products";
+    return find_by_sql($sql);
+}
+
+function get_last_product_id()
+{
+    global $db;
+    $sql = "SELECT MAX(id) FROM products";
     return find_by_sql($sql);
 }
