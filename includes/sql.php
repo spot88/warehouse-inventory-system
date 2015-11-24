@@ -351,7 +351,7 @@ function find_recent_sale_added($limit)
     $sql = "SELECT s.id,s.qty,s.price,s.date,p.name,u.username";
     $sql .= " FROM sales s LEFT JOIN users u ON s.FK_userID = u.id";
     $sql .= " LEFT JOIN products p ON s.product_id = p.id";
-    $sql .= " ORDER BY s.date DESC LIMIT " . $db->escape((int)$limit);
+    $sql .= " ORDER BY s.date DESC, id DESC LIMIT " . $db->escape((int)$limit);
     return find_by_sql($sql);
 }
 
