@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Add Sale';
+$page_title = 'Registrer salg';
 require_once('includes/load.php');
 // Checking userlevel
 page_require_level(3);
