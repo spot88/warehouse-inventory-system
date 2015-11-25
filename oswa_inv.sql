@@ -127,7 +127,8 @@ ALTER TABLE `categories`
 INSERT INTO `user_groups` (`id`, `group_name`, `group_level`, `group_status`) VALUES
 (1, 'Admin', 1, 1),
 (2, 'Leveranse', 2, 1),
-(3, 'Kundesenter', 3, 1);
+(3, 'Kundesenter', 3, 1),
+(4, 'Resepsjon', 4, 1),
 
 -- Indexes for table `media`
 
