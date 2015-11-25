@@ -29,7 +29,7 @@
         $query .=")";
         if($db->query($query)){
           //sucess
-          $session->msg('s',"Group has been creted! ");
+          $session->msg('s',"Group has been created! ");
           redirect('add_group.php', false);
         } else {
           //failed
