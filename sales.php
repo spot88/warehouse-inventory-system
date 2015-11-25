@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Salg';
+$page_title = 'Dine salg';
 require_once('includes/load.php');
 
 // Checking userlevel
