@@ -37,7 +37,7 @@ $storageStatus = storage_status();
                                     <thead>
                                     <tr>
                                         <th>Produkt</th>
-                                        <th>Antall solgt</th>
+                                        <th>Antall salg</th>
                                         <th>Totalt antall</th>
                                     <tr>
                                     </thead>
@@ -66,7 +66,6 @@ $storageStatus = storage_status();
                                 <table class="table table-striped table-bordered table-condensed">
                                     <thead>
                                     <tr>
-                                        <th class="text-center" style="width: 50px;">#</th>
                                         <th>Produkt</th>
                                         <th>Dato</th>
                                         <th>Pris</th>
@@ -76,7 +75,6 @@ $storageStatus = storage_status();
                                     <tbody>
                                     <?php foreach ($recent_sales as $recent_sale): ?>
                                         <tr>
-                                            <td class="text-center"><?php echo count_id(); ?></td>
                                             <td><?php echo remove_junk(first_character($recent_sale['name'])); ?> </td>
                                             <td><?php echo remove_junk(ucfirst($recent_sale['date'])); ?></td>
                                             <td><?php echo remove_junk(first_character($recent_sale['price'])); ?>,-</td>

@@ -27,6 +27,8 @@ if (isset($_POST['storage'])) {
         $A_ks_lager[$i] = $_POST["ks-lager-$i"];
 
         //TODO legge inn if som sjekker om verdier har vært forandret og fiks quantity
+        //TODO Quantity fikses med å hente gammel verdi for kslageret og ta quantity minus den.
+        //TODO Legge til if som setter quantity til 0?
         $query = "UPDATE products SET ks_storage = '{$I_kslager}', quantity = '{$I_hovedlager}' WHERE id = '{$i}'";
         $result = $db->query($query);
         if ($result && $db->affected_rows() == 1) {

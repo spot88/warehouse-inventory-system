@@ -42,6 +42,7 @@ include_once('layouts/header.php'); ?>
                         <th class="text-center" style="width: 5%;"> Antall</th>
                         <th class="text-center" style="width: 5%;"> Total</th>
                         <th class="text-center" style="width: 5%;"> Dato</th>
+                        <?php if(get_userlevel() == 1) { echo("<th class='text-center'> Bruker </th>"); } ?>
                         <th class="text-center" style="width: 5%;"> Kundenummer</th>
                         <th class="text-center" style="width: 50%;"> Kommentar</th>
                         <th class="text-center" style="width: 100px;"> Handlinger</th>
@@ -55,6 +56,7 @@ include_once('layouts/header.php'); ?>
                             <td class="text-center"><?php echo (int)$sale['qty']; ?></td>
                             <td class="text-center"><?php echo remove_junk($sale['price']); ?>,-</td>
                             <td class="text-center"><?php echo $sale['date']; ?></td>
+                            <?php if(get_userlevel() == 1) { echo("<td class='text-center'>{$sale['username']}</td> "); } ?>
                             <td class="text-center"><?php echo $sale['custnr']; ?></td>
                             <td class="text-center"><?php echo $sale['comment']; ?></td>
                             <td class="text-center">

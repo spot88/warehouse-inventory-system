@@ -1,30 +1,26 @@
 <ul>
-  <li>
-    <a href="home.php">
-      <i class="glyphicon glyphicon-home"></i>
-      <span>Dashboard</span>
-    </a>
-  </li>
-  <li>
-    <a href="categorie.php" >
-      <i class="glyphicon glyphicon-indent-left"></i>
-      <span>Categorie</span>
-    </a>
-  </li>
-  <li>
-    <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-th-large"></i>
-      <span>Product</span>
-    </a>
-    <ul class="nav submenu">
-       <li><a href="product.php">Manage product</a> </li>
-       <li><a href="add_product.php">Add product</a> </li>
-   </ul>
-  </li>
-  <li>
-    <a href="media.php" >
-      <i class="glyphicon glyphicon-picture"></i>
-      <span>Media</span>
-    </a>
-  </li>
+    <li>
+        <a href="home.php">
+            <i class="glyphicon glyphicon-home"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    <li>
+        <a href="storage.php">
+            <i class="glyphicon glyphicon-signal"></i>
+            <span>Lagerstatus</span>
+        </a>
+    </li>
+    <li>
+        <a href="sales.php">
+            <i class="glyphicon glyphicon-signal"></i>
+            <span>Dine salg</span>
+        </a>
+    </li>
+    <li>
+        <a href="add_sale.php" class="submenu-toggle">
+            <i class="glyphicon glyphicon-th-list"></i>
+            <span>Registrer salg</span>
+        </a>
+    </li>
 </ul>

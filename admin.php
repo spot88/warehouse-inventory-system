@@ -38,7 +38,7 @@ include_once('layouts/header.php'); ?>
                     <thead>
                     <tr>
                         <th>Produkt</th>
-                        <th>Antall solgt</th>
+                        <th>Antall salg</th>
                         <th>Totalt antall</th>
                     <tr>
                     </thead>

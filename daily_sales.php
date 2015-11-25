@@ -3,14 +3,12 @@ $page_title = 'Daily Sales';
 require_once('includes/load.php');
 // Checking userlevel
 page_require_level(3);
-?>
 
-<?php
 $year = date('Y');
 $month = date('m');
 $sales = dailySales($year, $month);
-?>
-<?php include_once('layouts/header.php'); ?>
+
+include_once('layouts/header.php'); ?>
 <div class="row">
     <div class="col-md-6">
         <?php echo display_msg($msg); ?>

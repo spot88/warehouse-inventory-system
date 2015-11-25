@@ -2,7 +2,7 @@
   $page_title = 'All Image';
   require_once('includes/load.php');
   // Checking userlevel
-  page_require_level(2);
+  page_require_level(1);
 ?>
 <?php $media_files = find_all('media');?>
 <?php
