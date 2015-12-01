@@ -37,7 +37,8 @@ INSERT INTO `media` (`id`, `file_name`, `file_type`) VALUES
 (7, 'harddisk.jpg', 'image/jpeg'),
 (8, 'FMG.jpg', 'image/jpeg'),
 (9, 'Cisco-sg.jpg', 'image/jpeg'),
-(10, 'Wifi-pluss.png', 'image/png');
+(10, 'Wifi-pluss.png', 'image/png'),
+(11, 'ZyXEL-P2812.jpg', 'image/jpeg');
 
 -- Table structure for table `products`
 
@@ -68,7 +69,8 @@ INSERT INTO `products` (`id`, `name`, `quantity`, `ks_storage`, `buy_price`, `sa
 (7, 'PVR Module', 100, 15, '399.00', '599.00', 1, 7, 0, 'Customer', '2015-11-23 10:04:25'),
 (8, 'FMG-Fibermodem', 100, 15, '599.00', '999.00', 3, 8, 0, 'Customer', '2015-11-23 10:04:41'),
 (9, 'Cisco SG-300', 100, 15, '599.00', '999.00', 4, 9, 1, 'Customer', '2015-11-23 10:04:41'),
-(10, 'Tafjord Wifi Pluss', 10, 990, '990.00', '1490.00', 3, 10, 0, 'DIV-1113', '2015-11-24 12:59:02');
+(10, 'Tafjord Wifi Pluss', 10, 990, NULL, '990.00', '1490.00', 3, 10, 0, 'DIV-1113', '2015-11-24 12:59:02'),
+(11, 'ZyXEL P2812', 100, 599, NULL, '599.00', '990.00', 3, 11, 0, 'BB101', '2015-12-01 12:05:18');
 
 -- Table structure for table `sales`
 
