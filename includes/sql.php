@@ -463,3 +463,10 @@ function search_custnr($cust)
     $sql .= " ORDER BY s.date DESC, id DESC LIMIT 50";
     return find_by_sql($sql);
 }
+
+function storage_fix_deletion($id, $qty)
+{
+    global $db;
+    $sql = "UPDATE `products` SET ks_storage = (ks_storage + {$qty}) WHERE id = {$id}";
+    return find_by_sql($sql);
+}
