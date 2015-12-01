@@ -43,7 +43,7 @@ if (isset($_POST['p_name']) && strlen($_POST['p_name'])) {
             $html .= "<input type=\"text\" class=\"form-control\" name=\"price[]\" value=\"{$result['sale_price']}\" readonly>";
             $html .= "</td>";
             $html .= "<td id=\"s_qty\">";
-            $html .= "<input type=\"text\" class=\"form-control\" name=\"quantity[]\" value=\"1\">";
+            $html .= "<input type=\"text\" class=\"form-control\" name=\"quantity[]\" value=\"1\" min='0'>";
             $html .= "</td>";
             $html .= "<td>";
             $html .= "<input type=\"hidden\" class=\"form-control\" name=\"total\" value=\"{$result['sale_price']}\" readonly>";
