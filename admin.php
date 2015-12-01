@@ -56,7 +56,7 @@ include_once('layouts/header.php'); ?>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="panel panel-default">
+        <div class="panel panel-default" >
             <div class="panel-heading">
                 <strong>
                     <span class="glyphicon glyphicon-th"></span>
@@ -64,7 +64,7 @@ include_once('layouts/header.php'); ?>
                 </strong>
             </div>
             <div class="panel-body">
-                <table class="table table-striped table-bordered table-condensed">
+                <table class="table table-striped table-bordered table-condensed" style="min-width: 100%">
                     <thead>
                     <tr>
                         <th class="text-center" style="width: 50px;">#</th>

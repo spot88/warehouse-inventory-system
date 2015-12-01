@@ -274,7 +274,8 @@ function find_all_product_info_by_title($title)
     return find_by_sql($sql);
 }
 
-function get_product_info_by_id($id) {
+function get_product_info_by_id($id)
+{
     global $db;
     $sql = "SELECT * FROM products WHERE id = {$id}";
     return find_by_sql($sql);
@@ -344,7 +345,7 @@ function find_all_user_sales()
     $sql .= " FROM sales s";
     $sql .= " LEFT JOIN products p ON s.product_id = p.id";
     $sql .= " WHERE s.FK_userID = '$userID'";
-    $sql .= " ORDER BY s.date DESC LIMIT 50";
+    $sql .= " ORDER BY s.date DESC, id DESC LIMIT 50";
 
     return find_by_sql($sql);
 }
@@ -452,3 +453,9 @@ function get_categories_user()
     return find_by_sql($sql);
 }
 
+function search_custnr($cust)
+{
+    global $db;
+    $sql = "SELECT * FROM `sales` WHERE custnr ={$cust}";
+    return find_by_sql($sql);
+}

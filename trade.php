@@ -86,7 +86,7 @@ if (isset($_POST['custnr'])) {
                                 <span class="input-group-addon">
                                       <i class="glyphicon glyphicon-info-sign"></i>
                                  </span>
-                                <input class="form-control" type="number" min="0" max="10000000" size="8" name="custnr" placeholder="Kundenummer" autocomplete="on" required>
+                                <input class="form-control" type="number" min="0" max="10000000" size="8" name="custnr" placeholder="Kundenummer" autocomplete="on">
                             </div>
                         </div>
 
