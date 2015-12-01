@@ -17,8 +17,8 @@
             <span>Brukere</span>
         </a>
         <ul class="nav submenu">
-            <li><a href="group.php">Admin Brukergrupper</a></li>
-            <li><a href="users.php">Admin brukerkontoer</a></li>
+            <li><a href="group.php">Brukergrupper</a></li>
+            <li><a href="users.php">Brukerkontoer</a></li>
         </ul>
     </li>
     <li>
@@ -50,8 +50,14 @@
         </a>
         <ul class="nav submenu">
             <li><a href="sales.php">Alle Salg</a></li>
-            <li><a href="add_sale.php">Registrer Salg</a></li>
+            <li><a href="new_sale.php">Registrer Salg</a></li>
         </ul>
+    </li>
+    <li>
+        <a href="trade.php">
+            <i class="glyphicon glyphicon-signal"></i>
+            <span>Bytte</span>
+        </a>
     </li>
     <li>
         <a href="#" class="submenu-toggle">

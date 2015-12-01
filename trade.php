@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Registrer salg';
+$page_title = 'Innbytte';
 require_once('includes/load.php');
 // Checking userlevel
 page_require_level(3);
@@ -40,7 +40,7 @@ if (isset($_POST['custnr'])) {
             $s_date = make_date();
             $s_userID = $_SESSION['user_id'];
 
-            $sql = "INSERT INTO sales (";
+            $sql = "INSERT INTO trade (";
             $sql .= " product_id, qty, price, date, custnr, comment, FK_userID";
             $sql .= ") VALUES (";
             $sql .= "'{$p_id}', '{$s_qty}', '{$s_total}', '{$s_date}', '{$custnr}', '{$comment}','$s_userID'";
@@ -57,7 +57,7 @@ if (isset($_POST['custnr'])) {
         }
     } else {
         $session->msg("d", $errors);
-        redirect('new_sale.php', false);
+        redirect('trade.php', false);
     }
 }
 
@@ -69,7 +69,7 @@ if (isset($_POST['custnr'])) {
         <div class="panel-heading clearfix">
             <strong>
                 <span class="glyphicon glyphicon-th"></span>
-                <span>Salg</span>
+                <span>Innbytte</span>
             </strong>
         </div>
         <div class="panel-body">
@@ -78,46 +78,46 @@ if (isset($_POST['custnr'])) {
                     <button name="<?php echo($prod['id']); ?>" class="btn btn-danger"><?php echo $prod['name']; ?></button>
                 <?php endforeach; ?>
             </div>
-            <form method="post" action="new_sale.php">
-            <div class="form-group" style="margin-top: 15px">
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="input-group">
+            <form method="post">
+                <div class="form-group" style="margin-top: 15px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="input-group">
                                 <span class="input-group-addon">
                                       <i class="glyphicon glyphicon-info-sign"></i>
                                  </span>
-                            <input class="form-control" type="number" min="0" max="10000000" size="8" name="custnr" placeholder="Kundenummer" autocomplete="on" required>
-                        </div>
-                    </div>
-
-                        <div class="input-group">
-
-                            <input type="hidden" class="form-control datePicker" name="date" data-date data-date-format="yyyy-mm-dd" required placeholder="Dato>
+                                <input class="form-control" type="number" min="0" max="10000000" size="8" name="custnr" placeholder="Kundenummer" autocomplete="on" required>
+                            </div>
                         </div>
 
 
-                    <div class="col-md-2">
-                        <div class="input-group">
+                            <div class="input-group">
+                                <input type="hidden" class="form-control datePicker" name="date" data-date data-date-format="yyyy-mm-dd" required placeholder="Dato" >
+                            </div>
+
+
+                        <div class="col-md-2">
+                            <div class="input-group">
                                 <span class="input-group-addon">
                                       <i class="glyphicon glyphicon-info-sign"></i>
                                  </span>
-                            <textarea rows="1" class="form-control" type="text" name="comment" placeholder="Kommentar" required></textarea>
+                                <textarea rows="1" class="form-control" type="text" name="comment" placeholder="Kommentar" required></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <table class="table table-bordered">
-                <thead>
-                <th style="width: 33%"> Produkt</th>
-                <th style="width: 33%"> Pris</th>
-                <th style="width: 33%"> Antall</th>
-                </thead>
+                <table class="table table-bordered">
+                    <thead>
+                    <th style="width: 33%"> Produkt</th>
+                    <th style="width: 33%"> Pris</th>
+                    <th style="width: 33%"> Antall</th>
+                    </thead>
 
-                <tbody id="result">
+                    <tbody id="result">
 
-                </tbody>
-                <button type="submit" name="sale" class="btn btn-primary">Fullfør</button>
-                </form>
+                    </tbody>
+                    <button type="submit" name="sale" class="btn btn-primary">Fullfør</button>
+            </form>
             </table>
         </div>
     </div>

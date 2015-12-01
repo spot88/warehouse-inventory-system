@@ -274,6 +274,12 @@ function find_all_product_info_by_title($title)
     return find_by_sql($sql);
 }
 
+function get_product_info_by_id($id) {
+    global $db;
+    $sql = "SELECT * FROM products WHERE id = {$id}";
+    return find_by_sql($sql);
+}
+
 /*--------------------------------------------------------------*/
 /* Function for Update product quantity
 /*--------------------------------------------------------------*/
@@ -424,3 +430,25 @@ function get_last_product_id()
     $sql = "SELECT MAX(id) FROM products";
     return find_by_sql($sql);
 }
+
+function get_products_from_categories()
+{
+    global $db;
+    $sql = "SELECT * FROM `products` ORDER BY id ASC";
+    return find_by_sql($sql);
+}
+
+function get_products_user()
+{
+    global $db;
+    $sql = "SELECT * FROM `products` WHERE bedrift = 0 ORDER BY id ASC";
+    return find_by_sql($sql);
+}
+
+function get_categories_user()
+{
+    global $db;
+    $sql = "SELECT * FROM `categories` WHERE id < 4 ORDER BY id ASC";
+    return find_by_sql($sql);
+}
+
