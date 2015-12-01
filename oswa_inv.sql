@@ -28,13 +28,12 @@ CREATE TABLE IF NOT EXISTS `media` (
 -- Dumping data for table `media`
 
 INSERT INTO `media` (`id`, `file_name`, `file_type`) VALUES
-
 (1, 'Asus.jpg', 'image/jpeg'),
 (2, 'Asus-ekstender.jpg', 'image/jpeg'),
 (3, 'tv-startpakke.jpg', 'image/jpeg'),
 (4, 'tv-mottaker.jpg', 'image/jpeg'),
-(5, 'fjernkontroll.jpg', 'image/jpeg'),
-(6, 'dekoder.jpg', 'image/jpeg'),
+(5, 'Fjernkontroll.jpg', 'image/jpeg'),
+(6, 'Dekoder.jpg', 'image/jpeg'),
 (7, 'harddisk.jpg', 'image/jpeg'),
 (8, 'FMG.jpg', 'image/jpeg'),
 (9, 'Cisco-sg.jpg', 'image/jpeg'),
