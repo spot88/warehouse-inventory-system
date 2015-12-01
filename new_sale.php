@@ -100,7 +100,7 @@ if (isset($_POST['custnr'])) {
                                 <span class="input-group-addon">
                                       <i class="glyphicon glyphicon-info-sign"></i>
                                  </span>
-                                <textarea rows="1" class="form-control" type="text" name="comment" placeholder="Kommentar" required></textarea>
+                                <textarea rows="1" class="form-control" type="text" name="comment" placeholder="Kommentar"></textarea>
                             </div>
                         </div>
                     </div>
