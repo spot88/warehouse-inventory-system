@@ -167,6 +167,11 @@ ALTER TABLE `sales`
   ADD KEY `product_id` (`product_id`),
   ADD KEY `FK_userID` (`FK_userID`);
 
+ALTER TABLE `trade`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `FK_userID` (`FK_userID`);
+
 
 
 -- Indexes for table `users`
@@ -205,6 +210,10 @@ ALTER TABLE `products`
 
 ALTER TABLE `sales`
   MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE `trade`
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 
 
 -- AUTO_INCREMENT for table `users`
