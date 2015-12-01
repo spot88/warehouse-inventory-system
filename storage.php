@@ -23,15 +23,20 @@ if (isset($_POST['storage'])) {
         $I_hovedlager = $_POST["hovedlager-$i"];
         $I_kslager = $_POST["ks-lager-$i"];
 
-        $A_hovedlager[$i] = $_POST["hovedlager-$i"];
-        $A_ks_lager[$i] = $_POST["ks-lager-$i"];
+        $oldHoved = $storageStatus[$i]['quantity'];
+        $oldKS = $storageStatus[$i]['ks_storage'];
+
+        $hovedDiff = $I_hovedlager - $oldHoved;
+
+        $hoved = $I_hovedlager - $hovedDiff;
 
         //TODO legge inn if som sjekker om verdier har vært forandret og fiks quantity
         //TODO Quantity fikses med å hente gammel verdi for kslageret og ta quantity minus den.
         //TODO Legge til if som setter quantity til 0?
+
         $query = "UPDATE products SET ks_storage = '{$I_kslager}', quantity = '{$I_hovedlager}' WHERE id = '{$i}'";
         $result = $db->query($query);
-        if ($result && $db->affected_rows() == 1) {
+        if ($result && $db->affected_rows() === 1) {
             $dbupdate = true;
         }
     }
@@ -39,12 +44,12 @@ if (isset($_POST['storage'])) {
 
     //TODO viser ikke statusmelding på oppdatert lager.
     if ($dbupdate) {
-        echo 'banana';
         $session->msg('s', "Lagerstatus oppdatert");
-        redirect('storage.php', false);
+//        redirect('home.php', true);
+        echo "<meta http-equiv=\"refresh\" content=\"0\">";
     } else {
         $session->msg('d', ' Sorry failed to update!');
-        redirect('storage.php', false);
+//        redirect('home.php', false);
     }
     $dbupdate = false;
 }
@@ -79,11 +84,7 @@ if (isset($_POST['storage'])) {
                                 ?>
                                 <tr class="text-center">
                                     <td><?php echo first_character($storage['name']); ?></td>
-                                    <?php if ($is_admin) {
-                                        echo("<td><input type='number' class='form-control' name='hovedlager-$storageID' value='$hovedlager_value' required>");
-                                    } else {
-                                        echo("<td><input type='number' class='form-control' name='hovedlager-$storageID' value='$hovedlager_value' readonly>");
-                                    } ?>
+                                    <?php echo("<td><input type='number' class='form-control' name='hovedlager-$storageID' value='$hovedlager_value' required>"); ?>
                                     <td><input type="number" class="form-control" name="ks-lager-<?php echo($storage['id']); ?>" value="<?php echo($storage['ks_storage']); ?>" required></td>
                                 </tr>
                             <?php endforeach; ?>

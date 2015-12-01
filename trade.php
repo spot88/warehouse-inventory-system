@@ -2,7 +2,7 @@
 $page_title = 'Innbytte';
 require_once('includes/load.php');
 // Checking userlevel
-page_require_level(3);
+page_require_level(4);
 
 include_once('layouts/header.php');
 
@@ -90,10 +90,9 @@ if (isset($_POST['custnr'])) {
                             </div>
                         </div>
 
-
-                            <div class="input-group">
-                                <input type="hidden" class="form-control datePicker" name="date" data-date data-date-format="yyyy-mm-dd" required placeholder="Dato" >
-                            </div>
+                        <div class="input-group">
+                            <input type="hidden" class="form-control datePicker" name="date" data-date data-date-format="yyyy-mm-dd" required placeholder="Dato">
+                        </div>
 
 
                         <div class="col-md-2">

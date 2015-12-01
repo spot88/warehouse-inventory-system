@@ -12,14 +12,16 @@
         </a>
     </li>
     <li>
-        <a href="#" class="submenu-toggle">
+        <a href="group.php">
             <i class="glyphicon glyphicon-user"></i>
-            <span>Brukere</span>
+            <span>Brukergrupper</span>
         </a>
-        <ul class="nav submenu">
-            <li><a href="group.php">Brukergrupper</a></li>
-            <li><a href="users.php">Brukerkontoer</a></li>
-        </ul>
+    </li>
+    <li>
+        <a href="users.php">
+            <i class="glyphicon glyphicon-user"></i>
+            <span>Brukerkontoer</span>
+        </a>
     </li>
     <li>
         <a href="categorie.php">
@@ -28,14 +30,16 @@
         </a>
     </li>
     <li>
-        <a href="#" class="submenu-toggle">
+        <a href="product.php">
             <i class="glyphicon glyphicon-th-large"></i>
             <span>Produkter</span>
         </a>
-        <ul class="nav submenu">
-            <li><a href="product.php">Admin Produkter</a></li>
-            <li><a href="add_product.php">Legg til Produkt</a></li>
-        </ul>
+    </li>
+    <li>
+        <a href="add_product.php">
+            <i class="glyphicon glyphicon-th-large"></i>
+            <span>Legg til Produkt</span>
+        </a>
     </li>
     <li>
         <a href="media.php">
@@ -44,30 +48,39 @@
         </a>
     </li>
     <li>
-        <a href="#" class="submenu-toggle">
-            <i class="glyphicon glyphicon-th-list"></i>
+        <a href="sales.php">
+            <i class="glyphicon glyphicon-signal"></i>
             <span>Salg</span>
         </a>
-        <ul class="nav submenu">
-            <li><a href="sales.php">Alle Salg</a></li>
-            <li><a href="new_sale.php">Registrer Salg</a></li>
-        </ul>
+    </li>
+    <li>
+        <a href="new_sale.php" class="submenu-toggle">
+            <i class="glyphicon glyphicon-th-list"></i>
+            <span>Registrer salg</span>
+        </a>
     </li>
     <li>
         <a href="trade.php">
-            <i class="glyphicon glyphicon-signal"></i>
+            <i class="glyphicon glyphicon-th-list"></i>
             <span>Bytte</span>
         </a>
     </li>
     <li>
-        <a href="#" class="submenu-toggle">
+        <a href="sales_report.php">
             <i class="glyphicon glyphicon-signal"></i>
-            <span>Rapporter</span>
+            <span>Sales by dates</span>
         </a>
-        <ul class="nav submenu">
-            <li><a href="sales_report.php">Sales by dates </a></li>
-            <li><a href="monthly_sales.php">Monthly sales</a></li>
-            <li><a href="daily_sales.php">Daily sales</a></li>
-        </ul>
+    </li>
+    <li>
+        <a href="monthly_sales.php">
+            <i class="glyphicon glyphicon-signal"></i>
+            <span>Monthly sales</span>
+        </a>
+    </li>
+    <li>
+        <a href="daily_sales.php">
+            <i class="glyphicon glyphicon-signal"></i>
+            <span>Daily sales</span>
+        </a>
     </li>
 </ul>

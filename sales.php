@@ -30,7 +30,7 @@ include_once('layouts/header.php'); ?>
                 </strong>
 
                 <div class="pull-right">
-                    <a href="add_sale.php" class="btn btn-primary">Nytt salg</a>
+                    <a href="new_sale.php" class="btn btn-primary">Nytt salg</a>
                 </div>
             </div>
             <div class="panel-body">
