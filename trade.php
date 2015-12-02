@@ -103,6 +103,16 @@ if (isset($_POST['custnr'])) {
                                 <textarea rows="1" class="form-control" type="text" name="comment" placeholder="Kommentar" required></textarea>
                             </div>
                         </div>
+                        
+                        
+                        <div class="col-md-2">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                      <i class="glyphicon glyphicon-info-sign"></i>
+                                 </span>
+                                <textarea rows="1" class="form-control" type="text" name="mac" placeholder="MAC address"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <table class="table table-bordered">
